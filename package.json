@@ -1,8 +1,10 @@
 {
   "name": "@dblechoc/plugin-lit-refresh",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "MIT",
   "author": "Anthony Mittaz",
+  "description": "Lit HMR for Vite",
+  "repository": "https://github.com/sync/plugin-lit-refresh.git",
   "files": [
     "index.js",
     "index.d.ts"
