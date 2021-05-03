@@ -218,7 +218,7 @@ window.customElements.define = (tagName, classObj, ...rest) => {
  *
  * @returns {import('vite').Plugin}
  */
-module.exports = function litElementRefreshPlugin() {
+module.exports = function LitRefreshPlugin() {
   let shouldSkip = false;
 
   return {
