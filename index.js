@@ -233,10 +233,7 @@ module.exports = function LitRefreshPlugin() {
         return;
       }
 
-      if (
-        !/\.(t|j)sx?$/.test(id) ||
-        (id.includes("node_modules") && !id.includes("mono-components"))
-      ) {
+      if (!/\.(t|j)sx?$/.test(id) || id.includes("node_modules")) {
         return;
       }
 
