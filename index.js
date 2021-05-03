@@ -249,12 +249,8 @@ module.exports = function LitRefreshPlugin() {
       const header = `
         // taken from: https://github.com/open-wc/open-wc/blob/master/packages/dev-server-hmr/src/presets/lit.js
 
-        import { adoptStyles } from 'lit';
+        import { adoptStyles, supportsAdoptingStyleSheets } from 'lit';
 
-        const supportsAdoptingStyleSheets = (window.ShadowRoot) &&
-          (window.ShadyCSS === undefined || window.ShadyCSS.nativeShadow) &&
-          ('adoptedStyleSheets' in Document.prototype) &&
-          ('replace' in CSSStyleSheet.prototype);
         // static callback
         LitElement.hotReplacedCallback = function hotReplacedCallback() {
           this.finalize();

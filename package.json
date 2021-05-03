@@ -1,6 +1,6 @@
 {
   "name": "@dblechoc/plugin-lit-refresh",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "MIT",
   "author": "Anthony Mittaz",
   "description": "Lit HMR for Vite",
