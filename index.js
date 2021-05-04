@@ -246,14 +246,14 @@ module.exports = function LitRefreshPlugin() {
       const header = `
         // taken from: https://github.com/open-wc/open-wc/blob/master/packages/dev-server-hmr/src/presets/lit.js
 
-        import { adoptStyles, supportsAdoptingStyleSheets } from 'lit';
+        import { adoptStyles, supportsAdoptingStyleSheets, LitElement as Element } from 'lit';
 
         // static callback
-        LitElement.hotReplacedCallback = function hotReplacedCallback() {
+        Element.hotReplacedCallback = function hotReplacedCallback() {
           this.finalize();
         };
         // instance callback
-        LitElement.prototype.hotReplacedCallback = function hotReplacedCallback() {
+        Element.prototype.hotReplacedCallback = function hotReplacedCallback() {
           if (!supportsAdoptingStyleSheets) {
             const nodes = Array.from(this.renderRoot.children);
             for (const node of nodes) {
