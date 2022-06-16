@@ -228,7 +228,9 @@ module.exports = function LitRefreshPlugin() {
       shouldSkip = config.command === "build" || config.isProduction;
     },
 
-    transform(code, id, ssr) {
+    transform(code, id, options) {
+      // (options was boolean ssr in vite <2.7.0)
+      const ssr = typeof options === "object" ? options.ssr : options;
       if (shouldSkip || ssr) {
         return;
       }
